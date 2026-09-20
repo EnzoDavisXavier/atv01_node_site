@@ -1,0 +1,25 @@
+<%- include ('partials/header.ejs')%>
+<%- include ('partials/navbar.ejs') %>
+    <a href="/"> << Voltar</a>
+    <br>
+    <h4 style="text-align: center;">Página Artistas</h4>
+
+    <table border="1">
+
+        <tr>
+           <th width="200px">Nome</th>
+           <th width="170px">Nacionalidade</th>
+           <th width="100px">Data de Nascimento</th>
+        </tr>
+
+        <% artista.forEach(artista => {%>
+            <tr>
+                <th><%= artista.nome%></th>
+                <th><%= artista.nacionalidade%></th>
+                <th><%= artista.nascimento%></th>
+            </tr>
+        <%})%>
+    </table>
+
+
+<%- include ('partials/footer.ejs') %>

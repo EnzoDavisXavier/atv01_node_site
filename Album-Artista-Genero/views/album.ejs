@@ -1,0 +1,25 @@
+<%- include ('partials/header.ejs')%>
+
+<%- include ('partials/navbar.ejs') %>
+    <a href="/"> << Voltar</a>
+    <br>
+    <h4 style="text-align: center;">Página Álbuns</h4>
+
+    <table border="1">
+
+        <tr>
+           <th width="140px">Título</th>
+           <th width="180px">Artista</th>
+           <th width="50px">Ano</th>
+        </tr>
+
+        <% album.forEach(album => {%>
+            <tr>
+                <th><%= album.titulo%></th>
+                <th><%= album.artista%></th>
+                <th><%= album.ano%></th>
+            </tr>
+        <%})%>
+    </table>
+  
+<%- include ('partials/footer.ejs') %>
