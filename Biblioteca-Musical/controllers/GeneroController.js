@@ -1,6 +1,5 @@
-import express from 'express' // Importando o framwork express
+import express from 'express' 
 
-// Router(): método do express para criar rotas
 const rota = express.Router();
 
 rota.get("/genero", (req, res)=>{
@@ -29,7 +28,6 @@ rota.get("/genero", (req, res)=>{
     }
 ];
     res.render('genero',{
-    //Enviando a lista de produtos para a página
         genero:genero,
     });
 })

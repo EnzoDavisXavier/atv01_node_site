@@ -1,6 +1,5 @@
-import express from 'express' // Importando o framwork express
+import express from 'express' 
 
-// Router(): método do express para criar rotas
 const rota = express.Router();
 
 
@@ -26,10 +25,8 @@ rota.get("/artista", (req, res) =>{
 ];
 
     res.render('artista',{
-    //Enviando a lista de produtos para a página
         artista:artista,
     });
 });
 
-// Exportando o módulo
 export default rota;
